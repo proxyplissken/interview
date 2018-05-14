@@ -1,0 +1,14 @@
+{
+  "fred": {
+    "gift": "candy cane"
+  },
+  "alice": {
+    "gift": "toy airplane"
+  },
+  "mark": {
+    "gift": "balloon"
+  },
+  "wendy": {
+    "gift": "top hat"
+  }
+}
