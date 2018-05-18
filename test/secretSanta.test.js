@@ -20,7 +20,7 @@ function runtest(list) {
   test('test', (t)=> {
     try {
       const availablePermutations = factor(Object.keys(list).length);
-      const attempts = availablePermutations * 15;
+      const attempts = availablePermutations * 50;
       const possibleGifts = {};
       const possibleNames = {};
       const resultMap = {};
@@ -62,19 +62,24 @@ function runtest(list) {
         }
       }
 
+      t.pass(`meets valid gift assignment acceptance criteria`);
+
       assert.equal(Object.keys(resultMap).length, availablePermutations, `should be ${availablePermutations} permutations of results`);
-      t.pass("meets all criteria, verifying distribution");
+
+      const expectedAverage = attempts/availablePermutations;
+      const threshold = (attempts/availablePermutations) * 1.6;
+
+      t.pass(`meets solution space criteria, verifying distribution, expected: ${expectedAverage}, threshold: ${threshold}`);
 
       Object.keys(resultMap).forEach((key)=> {
         console.log(`${key} : ${resultMap[key]}`);
       });
 
-      const threshold = (attempts * 2)/availablePermutations;
-
       Object.keys(resultMap).forEach((key)=> {
-        assert(resultMap[key] < threshold, `${key} had an abnormally high distribution, run again to verify`);
+        assert(resultMap[key] < threshold, `${key} had an abnormally high distribution > threshold ${threshold}, run again to verify`);
       });
 
+      t.pass(`meets solution randomness and distribution criteria`);
     } catch (error) {
       t.fail(error);
     }

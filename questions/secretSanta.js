@@ -58,7 +58,7 @@ function assignGifts2(list){
       values.splice(1,1);
     }
   });
-  
+
   return map;
 }
 
