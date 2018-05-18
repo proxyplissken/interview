@@ -38,7 +38,6 @@ function assignGifts2(list){
   shuffleArray(names);
 
   names.forEach((name, i)=> {
-    console.log(i);
     if(!(list[name].gift == values[0])) {
       map[name] = values[0];
       values.splice(0,1);
@@ -59,7 +58,7 @@ function assignGifts2(list){
       values.splice(1,1);
     }
   });
-
+  
   return map;
 }
 
