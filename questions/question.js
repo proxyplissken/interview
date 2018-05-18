@@ -8,6 +8,7 @@ Here are the specifications and requirements:
 2. Guests should not receive their own gift. (If Mark brings a balloon, he should not receive a balloon.)
 3. Your program should accept the sampleInput below and output a list of assignments in the sampleOutput format.
 4. The assignments should be random. (Your program should allow for any one guest to receive any other guest's gift.)
+5. No two guests will bring the same gift.
 
 */
 

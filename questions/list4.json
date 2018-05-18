@@ -1,0 +1,62 @@
+{
+  "fred": {
+    "gift": "candy cane"
+  },
+  "alice": {
+    "gift": "toy airplane"
+  },
+  "mark": {
+    "gift": "balloon"
+  },
+  "wendy": {
+    "gift": "top hat"
+  },
+  "zoolander": {
+    "gift": "shirt"
+  },
+  "a": {
+    "gift": "a"
+  },
+  "b": {
+    "gift": "b"
+  },
+  "c": {
+    "gift": "c"
+  },
+  "d": {
+    "gift": "d"
+  },
+  "e": {
+    "gift": "e"
+  },
+  "f": {
+    "gift": "f"
+  },
+  "g": {
+    "gift": "g"
+  },
+  "h": {
+    "gift": "h"
+  },
+  "i": {
+    "gift": "i"
+  },
+  "j": {
+    "gift": "j"
+  },
+  "k": {
+    "gift": "k"
+  },
+  "l": {
+    "gift": "l"
+  },
+  "m": {
+    "gift": "m"
+  },
+  "n": {
+    "gift": "n"
+  },
+  "o": {
+    "gift": "o"
+  }
+}
