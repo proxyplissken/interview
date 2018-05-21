@@ -20,10 +20,12 @@ function runtest(list) {
   test('test', (t)=> {
     try {
       const availablePermutations = factor(Object.keys(list).length);
-      const attempts = availablePermutations * 50;
+      const attempts = availablePermutations * 100;
       const possibleGifts = {};
       const possibleNames = {};
       const resultMap = {};
+
+      console.log(`running ${attempts} submissions`);
 
       for (let i = 0; i < attempts; i++) {
         const result = ss(list);
@@ -76,7 +78,7 @@ function runtest(list) {
       });
 
       Object.keys(resultMap).forEach((key)=> {
-        assert(resultMap[key] < threshold, `${key} had an abnormally high distribution > threshold ${threshold}, run again to verify`);
+        assert(resultMap[key] < threshold, `${key} had an abnormally high distribution ${resultMap[key]} > threshold ${threshold}, run again to verify`);
       });
 
       t.pass(`meets solution randomness and distribution criteria`);
